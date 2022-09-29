@@ -45,6 +45,12 @@ nyBtn.addEventListener("click", function () {
 
 })
 
+// LAGRADE ANVÄNDARNAMN OCH LÖSENORD
+
+const corecctUsername = "Sara";
+const corecctPassword = "qwe123";
+
+
 // IF SATSER
 
 loginBtn.addEventListener('click', function () {
@@ -53,7 +59,7 @@ loginBtn.addEventListener('click', function () {
     const password = document.getElementById("password").value;
 
 
-    if (userName == "Sara" && password == "qwe123") {
+    if (userName == corecctUsername && password == corecctPassword) {
         localStorage.setItem("inloggad", "ja");
         rensaGammalDiv();
         nyDivMedValkommenText();
