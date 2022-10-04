@@ -1,21 +1,20 @@
 
-// TEXT FÄLT OCH KNAPP 
 const userName = document.getElementById("userName");
 const password = document.getElementById("password");
 const loginBtn = document.getElementById("btnOutput");
 
-// DIVEN MED INNEHÅLLET ATT ÄNDRA VID INLOGG
+
 let inloggDiven = document.querySelector("#inloggSidan");
 let contentDiven = document.querySelector("#content");
 
-// NY LOGGA UT KNAPP OCH NY DIV
+
 let nyBtn = document.createElement("button");
 let nyDiv = document.createElement("div");
 
-// KOLLA OM MAN FORTFARANDE ÄR INLOGGAD I LOCALSTORAGE
+
 const inloggad = localStorage.getItem("inloggad");
 
-// FUNKTIONER
+
 function nyDivMedValkommenText() {
     let nyDivText = document.createTextNode("Välkommen, du är nu inloggad!");
     nyDiv.appendChild(nyDivText);
@@ -32,7 +31,7 @@ function nyLoggaUtKnapp() {
     inloggDiven.appendChild(nyBtn);
 }
 
-// FUNKTION LOGGA UT
+
 function loggaUt() {
     nyDiv.innerHTML = ""
     location.reload();
@@ -45,13 +44,10 @@ nyBtn.addEventListener("click", function () {
 
 })
 
-// LAGRADE ANVÄNDARNAMN OCH LÖSENORD
 
 const corecctUsername = "Sara";
 const corecctPassword = "qwe123";
 
-
-// IF SATSER
 
 loginBtn.addEventListener('click', function () {
 
@@ -70,7 +66,6 @@ loginBtn.addEventListener('click', function () {
     }
 })
 
-// HÅLLS INLOGGAD TILL MAN TRYCKER PÅ KANPPEN "LOGGA UT"
 
 if (inloggad) {
     rensaGammalDiv();
